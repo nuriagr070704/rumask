@@ -30,4 +30,10 @@ public class enemy_move : MonoBehaviour
 
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
     }
+
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        healthPlayer red_life = collision.collider.GetComponent<healthPlayer>();
+        red_life?.DamageReceived(1);
+    }
 }
