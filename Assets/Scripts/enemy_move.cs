@@ -6,6 +6,7 @@ public class enemy_move : MonoBehaviour
 {
     private Rigidbody2D rb;
     public Transform player;
+    public GameObject maskPrefab;
     public float speed = 2f;
     public float detectionRadius = 5f;
     private Vector2 movement;
@@ -29,5 +30,10 @@ public class enemy_move : MonoBehaviour
         }
 
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+    }
+
+    void Die() {
+        Instantiate(maskPrefab, transform.position, Quaternion.identity);
+        Destroy(gameObject);
     }
 }
