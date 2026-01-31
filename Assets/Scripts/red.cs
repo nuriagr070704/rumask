@@ -29,6 +29,14 @@ public class red : MonoBehaviour
         {
            body.linearVelocity+=Vector2.down*5; 
         }
+        if (Input.GetKey(KeyCode.Space) )
+        {
+           dispara(); 
+        }
         
+    }
+    private void dispara()
+    {
+        Instantiate(bullet,transfor.position,Quaternion.identity);
     }
 }
