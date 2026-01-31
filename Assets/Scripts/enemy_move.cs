@@ -9,6 +9,7 @@ public class enemy_move : MonoBehaviour
     public float speed = 2f;
     public float detectionRadius = 5f;
     private Vector2 movement;
+    private int health=4;
 
     void Start()
     {
@@ -29,5 +30,10 @@ public class enemy_move : MonoBehaviour
         }
 
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
+    }
+    public void Hit()
+    {
+        health = health-1;
+        if (health == 0) Destroy(gameObject);
     }
 }

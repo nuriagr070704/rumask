@@ -21,4 +21,13 @@ public class bullet : MonoBehaviour
     {
         Direccion= dir;
     }
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        enemy_move enemy= collision.collider.GetComponent<enemy_move>();
+        if (enemy != null)
+        {
+            enemy.Hit();
+            Destroy(gameObject);
+        }    
+    }
 }
