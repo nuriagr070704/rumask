@@ -1,3 +1,13 @@
+<<<<<<< HEAD:Assets/Cainos.meta
+fileFormatVersion: 2
+guid: 581177ea0317fb743af1269f10f09e26
+folderAsset: yes
+DefaultImporter:
+  externalObjects: {}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+=======
 fileFormatVersion: 2
 guid: a00008af2df64b12eba46ebc33e8d73c
 DefaultImporter:
@@ -5,3 +15,4 @@ DefaultImporter:
   userData: 
   assetBundleName: 
   assetBundleVariant: 
+>>>>>>> origin/player:Assets/Scenes/prueba.unity.meta
