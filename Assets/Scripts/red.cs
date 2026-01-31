@@ -50,7 +50,7 @@ public class red : MonoBehaviour
         if(ultima_dir==2) dir=Vector3.left;
         if(ultima_dir==3) dir=Vector3.up;
         if(ultima_dir==4) dir=Vector3.down;
-        GameObject bull=Instantiate(bulletPrefab,transform.position+dir*0.1f,Quaternion.identity);
+        GameObject bull=Instantiate(bulletPrefab,transform.position+dir*0.6f,Quaternion.identity);
         bull.GetComponent<bullet>().Set_Direction(dir); 
     }
 }
