@@ -12,6 +12,7 @@ GameObject:
   - component: {fileID: 8121523957089022665}
   - component: {fileID: 5453014167583061268}
   - component: {fileID: 8554119437129221069}
+  - component: {fileID: -255627105588485033}
   m_Layer: 0
   m_Name: mascara_planta
   m_TagString: Untagged
@@ -137,8 +138,20 @@ MonoBehaviour:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3284704323338518075}
-  m_Enabled: 1
+  m_Enabled: 0
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: 8500c8f30b6891a178494379a6366da7, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::mask_fire
+--- !u!114 &-255627105588485033
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 3284704323338518075}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: b0379873404218a4c80d1592dae31969, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::planta_mask

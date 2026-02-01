@@ -18,7 +18,7 @@ public class mask_fire : MonoBehaviour
         red r= collision.collider.GetComponent<red>();
         if (r != null && Input.GetKey(KeyCode.E))
         {
-            r.ActivarMascara();
+            r.ActivarMascara(red.Tipo_mascara.Fuego);
             Destroy(gameObject);
         }
     }

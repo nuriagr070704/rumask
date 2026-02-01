@@ -11,7 +11,7 @@ GameObject:
   - component: {fileID: 4849579442055996643}
   - component: {fileID: 8121523957089022665}
   - component: {fileID: 5453014167583061268}
-  - component: {fileID: 8554119437129221069}
+  - component: {fileID: -1193341255486114461}
   m_Layer: 0
   m_Name: mascara_extra
   m_TagString: Untagged
@@ -130,7 +130,7 @@ CircleCollider2D:
   m_CompositeOrder: 0
   m_Offset: {x: -0.33300605, y: 1.2387877}
   m_Radius: 0.8581385
---- !u!114 &8554119437129221069
+--- !u!114 &-1193341255486114461
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_CorrespondingSourceObject: {fileID: 0}
@@ -139,6 +139,6 @@ MonoBehaviour:
   m_GameObject: {fileID: 3284704323338518075}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 8500c8f30b6891a178494379a6366da7, type: 3}
+  m_Script: {fileID: 11500000, guid: 3997a9990eb4821cdba53327bcdc94eb, type: 3}
   m_Name: 
-  m_EditorClassIdentifier: Assembly-CSharp::mask_fire
+  m_EditorClassIdentifier: Assembly-CSharp::extra_mask

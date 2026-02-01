@@ -6,12 +6,22 @@ public class red : MonoBehaviour
     public Rigidbody2D body;
     public GameObject bulletPrefab;
     private int ultima_dir= 1;
+    public enum Tipo_mascara
+    {
+        Ninguna,
+        Fuego,
+        Agua,
+        Iron,
+        Planta,
+        Extra
+
+    }
+    
     void Start(){
         body = GetComponent<Rigidbody2D>();
         
     }
-    public bool tieneMascara=false;
-
+    public Tipo_mascara mascaraActual = Tipo_mascara.Ninguna;
     // Update is called once per frame
     void Update(){
         //frenar red
@@ -47,9 +57,13 @@ public class red : MonoBehaviour
         }
         
     }
-    public void ActivarMascara()
+    public void ActivarMascara(Tipo_mascara mask)
     {
-        tieneMascara=true;
+        mascaraActual = mask;
+        if (mascaraActual== Tipo_mascara.Extra) {
+
+            GetComponent<healthPlayer>().currentHealth=10;
+        }
     }
     private void dispara()
     {
@@ -60,10 +74,11 @@ public class red : MonoBehaviour
         if(ultima_dir==4) dir=Vector3.down;
         GameObject bull=Instantiate(bulletPrefab,transform.position+dir*0.6f,Quaternion.identity);
         bull.GetComponent<bullet>().Set_Direction(dir); 
-        if (tieneMascara) {
+        if (mascaraActual== Tipo_mascara.Fuego) {
 
             bull.GetComponent<bullet>().damage=2;
         }
+        
         Destroy(bull,1f);    
     }
 }

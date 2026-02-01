@@ -1,11 +1,25 @@
 using UnityEngine;
 
-public class EnemyMask : MonoBehaviour
+public class iron_mask : MonoBehaviour
 {
-    public int extraDamage = 1;
-
-    public void ApplyMask(enemy_move enemy)
+    // Start is called once before the first execution of Update after the MonoBehaviour is created
+    void Start()
     {
-        enemy.AddExtraDamage(extraDamage);
+        
+    }
+
+    // Update is called once per frame
+    void Update()
+    {
+        
+    }
+    private void OnCollisionStay2D(Collision2D collision)
+    {
+        red r= collision.collider.GetComponent<red>();
+        if (r != null && Input.GetKey(KeyCode.E))
+        {
+            r.ActivarMascara(red.Tipo_mascara.Iron);
+            Destroy(gameObject);
+        }
     }
 }
