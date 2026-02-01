@@ -60,4 +60,8 @@ public class enemy_move : MonoBehaviour
             Destroy(gameObject);
         }
     }
+    public void AddExtraDamage(int amount)
+    {
+        totalDamage+=amount;
+    }
 }

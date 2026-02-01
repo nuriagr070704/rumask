@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: WaterMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskData
   maskName: 
-  extraDamage: 0
+  extraDamage: 2
+  extraLife: 0
   maskSprite: {fileID: 0}

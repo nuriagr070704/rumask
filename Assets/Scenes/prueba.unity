@@ -334,6 +334,12 @@ PrefabInstance:
       value: 
       objectReference: {fileID: 3284704323338518075, guid: 26b775123e1465011aa98d9b35cf781d,
         type: 3}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: equippedMask
+      value: 
+      objectReference: {fileID: 11400000, guid: 99331fb16015fed4796116bf97d2253d,
+        type: 2}
     - target: {fileID: 3345275894355993127, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: m_Name
@@ -615,6 +621,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: equippedMask
+      value: 
+      objectReference: {fileID: 11400000, guid: 0bb8e3fa26c060046af2fa9951250321,
+        type: 2}
     - target: {fileID: 3345275894355993127, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: m_Name
@@ -796,6 +808,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: equippedMask
+      value: 
+      objectReference: {fileID: 11400000, guid: d65bee5367415644e9f7d6d40874ab19,
+        type: 2}
     - target: {fileID: 3345275894355993127, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: m_Name
@@ -977,6 +995,18 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: maskPrefab
+      value: 
+      objectReference: {fileID: 3284704323338518075, guid: f9544cb8219124bd39fc7f7425491a41,
+        type: 3}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: equippedMask
+      value: 
+      objectReference: {fileID: 11400000, guid: 6a4a44d0394143b45a2ea8fb309545e4,
+        type: 2}
     - target: {fileID: 3345275894355993127, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: m_Name
@@ -1146,6 +1176,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: equippedMask
+      value: 
+      objectReference: {fileID: 11400000, guid: 0bba3e4cb40e0cf46a05e82c3a88fbda,
+        type: 2}
     - target: {fileID: 3345275894355993127, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: m_Name
@@ -1314,7 +1350,7 @@ AudioSource:
   serializedVersion: 4
   OutputAudioMixerGroup: {fileID: 0}
   m_audioClip: {fileID: 0}
-  m_Resource: {fileID: 8300000, guid: 4bc9c6d6cf5f85859ab56cf4d781cc5a, type: 3}
+  m_Resource: {fileID: 8300000, guid: c04afa678c72a4391b7f7d026e4a04d5, type: 3}
   m_PlayOnAwake: 1
   m_Volume: 1
   m_Pitch: 1
@@ -1654,6 +1690,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: equippedMask
+      value: 
+      objectReference: {fileID: 11400000, guid: 99331fb16015fed4796116bf97d2253d,
+        type: 2}
     - target: {fileID: 3345275894355993127, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: m_Name

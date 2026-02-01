@@ -13,5 +13,6 @@ MonoBehaviour:
   m_Name: PlantMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskData
   maskName: 
-  extraDamage: 0
+  extraDamage: 1
+  extraLife: 1
   maskSprite: {fileID: 0}
