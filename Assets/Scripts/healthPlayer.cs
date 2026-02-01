@@ -1,11 +1,18 @@
 using UnityEngine;
 using System.Collections;
 using System.Collections.Generic;
+using UnityEngine.UI;
 
 public class healthPlayer : MonoBehaviour
 {
     public int maxHealth = 8;
     public int currentHealth;
+    public GameOverScreen GameOverScreen;
+
+    public void GameOver()
+    {
+        GameOverScreen.SetUp();
+    }
 
     void Start()
     {
@@ -18,7 +25,8 @@ public class healthPlayer : MonoBehaviour
 
         if (currentHealth <= 0)
         {
-            Destroy(gameObject);
+            GameOver();
+            //Destroy(gameObject);
         }
     }
 
