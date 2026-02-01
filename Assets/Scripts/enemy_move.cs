@@ -10,6 +10,7 @@ public class enemy_move : MonoBehaviour
     public float speed = 2f;
     public float detectionRadius = 5f;
     private Vector2 movement;
+    private int health=4;
 
     void Start()
     {
@@ -32,8 +33,14 @@ public class enemy_move : MonoBehaviour
         rb.MovePosition(rb.position + movement * speed * Time.deltaTime);
     }
 
-    void Die() {
-        Instantiate(maskPrefab, transform.position, Quaternion.identity);
-        Destroy(gameObject);
+    private void OnCollisionEnter2D(Collision2D collision)
+    {
+        healthPlayer red_life = collision.collider.GetComponent<healthPlayer>();
+        red_life?.DamageReceived(1);
+    }
+     public void Hit()
+    {
+        health = health-1;
+        if (health == 0) Destroy(gameObject);
     }
 }
