@@ -49,15 +49,15 @@ public class enemy_move : MonoBehaviour
         healthPlayer red_life = collision.collider.GetComponent<healthPlayer>();
         red_life?.DamageReceived(totalDamage);
     }
-
-     public void Hit()
+     public void Hit(int damage_)
     {
-        health = health-1;
-        if (health <= 0) Destroy(gameObject);
-    }
-
-    public void AddExtraDamage(int amount)
-    {
-        totalDamage += amount;
+        health = health-damage_;
+        if (health <= 0) {
+            if (maskPrefab != null)
+            {
+                Instantiate(maskPrefab, transform.position, Quaternion.identity);
+            }
+            Destroy(gameObject);
+        }
     }
 }

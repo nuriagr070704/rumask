@@ -10,6 +10,7 @@ public class red : MonoBehaviour
         body = GetComponent<Rigidbody2D>();
         
     }
+    public bool tieneMascara=false;
 
     // Update is called once per frame
     void Update(){
@@ -46,6 +47,10 @@ public class red : MonoBehaviour
         }
         
     }
+    public void ActivarMascara()
+    {
+        tieneMascara=true;
+    }
     private void dispara()
     {
         Vector3 dir=Vector3.right;
@@ -55,6 +60,10 @@ public class red : MonoBehaviour
         if(ultima_dir==4) dir=Vector3.down;
         GameObject bull=Instantiate(bulletPrefab,transform.position+dir*0.6f,Quaternion.identity);
         bull.GetComponent<bullet>().Set_Direction(dir); 
+        if (tieneMascara) {
+
+            bull.GetComponent<bullet>().damage=2;
+        }
         Destroy(bull,1f);    
     }
 }
