@@ -14,13 +14,12 @@ public class red : MonoBehaviour
         Iron,
         Planta,
         Extra
-
     }
     
     void Start(){
         body = GetComponent<Rigidbody2D>();
-        
     }
+
     public Tipo_mascara mascaraActual = Tipo_mascara.Ninguna;
     // Update is called once per frame
     void Update(){
@@ -33,18 +32,15 @@ public class red : MonoBehaviour
         if (Input.GetKey(KeyCode.LeftArrow) )
         {
             ultima_dir=2;
-
         }
         if (Input.GetKey(KeyCode.UpArrow) )
         {
             ultima_dir=3;
-
         }
         if (Input.GetKey(KeyCode.DownArrow) )
         {
             ultima_dir=4;
         }
-
 
         if (Input.GetKey(KeyCode.D) ) body.linearVelocity += Vector2.right * 5;
         if (Input.GetKey(KeyCode.A) ) body.linearVelocity+=Vector2.left*5; 
@@ -54,15 +50,22 @@ public class red : MonoBehaviour
         if (Input.GetKeyDown(KeyCode.Space) )
         {
            dispara(); 
-        }
-        
+        }   
     }
+
     public void ActivarMascara(Tipo_mascara mask)
     {
         mascaraActual = mask;
-        if (mascaraActual== Tipo_mascara.Extra) {
-
-            GetComponent<healthPlayer>().currentHealth=10;
+        if (mascaraActual == Tipo_mascara.Extra) {
+            GetComponent<healthPlayer>().currentHealth = 10;
+        }
+        else if (mascaraActual == Tipo_mascara.Iron)
+        {
+            GetComponent<healthPlayer>().currentHealth = 5;
+        }
+        else if (mascaraActual == Tipo_mascara.Iron)
+        {
+            GetComponent<healthPlayer>().currentHealth = 1;
         }
     }
     private void dispara()
@@ -72,11 +75,20 @@ public class red : MonoBehaviour
         if(ultima_dir==2) dir=Vector3.left;
         if(ultima_dir==3) dir=Vector3.up;
         if(ultima_dir==4) dir=Vector3.down;
+
         GameObject bull=Instantiate(bulletPrefab,transform.position+dir*0.6f,Quaternion.identity);
         bull.GetComponent<bullet>().Set_Direction(dir); 
-        if (mascaraActual== Tipo_mascara.Fuego) {
 
-            bull.GetComponent<bullet>().damage=2;
+        if (mascaraActual == Tipo_mascara.Fuego) {
+            bull.GetComponent<bullet>().damage = 3;
+        }
+        else if (mascaraActual == Tipo_mascara.Agua || mascaraActual == Tipo_mascara.Iron)
+        {
+            bull.GetComponent<bullet>().damage = 2;
+        }
+        else if (mascaraActual == Tipo_mascara.Planta || mascaraActual == Tipo_mascara.Extra)
+        {
+            bull.GetComponent<bullet>().damage = 1;
         }
         
         Destroy(bull,1f);    

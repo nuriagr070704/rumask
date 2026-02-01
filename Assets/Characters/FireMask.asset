@@ -12,7 +12,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 543580bb6d2cdee4d8c48a05a83906ee, type: 3}
   m_Name: FireMask
   m_EditorClassIdentifier: Assembly-CSharp::MaskData
-  maskName: 
+  maskName: Fire Mask
   extraDamage: 3
   extraLife: 0
   maskSprite: {fileID: 0}
