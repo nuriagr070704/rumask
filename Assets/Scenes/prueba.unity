@@ -623,6 +623,12 @@ PrefabInstance:
       objectReference: {fileID: 450598996}
     - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
+      propertyPath: maskPrefab
+      value: 
+      objectReference: {fileID: 3284704323338518075, guid: 410b12877dc678328996b2aa5548e19b,
+        type: 3}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
       propertyPath: equippedMask
       value: 
       objectReference: {fileID: 11400000, guid: 0bb8e3fa26c060046af2fa9951250321,
@@ -808,6 +814,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: maskPrefab
+      value: 
+      objectReference: {fileID: 3284704323338518075, guid: 17e8327c3ec3d02f1bef502ca7aa9c85,
+        type: 3}
     - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: equippedMask
@@ -1176,6 +1188,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: maskPrefab
+      value: 
+      objectReference: {fileID: 3284704323338518075, guid: 862b8915b1609f424bf1b06c1f39f725,
+        type: 3}
     - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: equippedMask
@@ -1690,6 +1708,12 @@ PrefabInstance:
       propertyPath: player
       value: 
       objectReference: {fileID: 450598996}
+    - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
+        type: 3}
+      propertyPath: maskPrefab
+      value: 
+      objectReference: {fileID: 3284704323338518075, guid: 26b775123e1465011aa98d9b35cf781d,
+        type: 3}
     - target: {fileID: 2259098686693196096, guid: 5ec6ca0f83f97c3ce9dc33280fa08cc8,
         type: 3}
       propertyPath: equippedMask
