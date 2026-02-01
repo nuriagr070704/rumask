@@ -6,6 +6,7 @@ public class bullet : MonoBehaviour
     private Rigidbody2D body;
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     private Vector2 Direccion;
+    public int damage=1;
     void Start()
     {
         body = GetComponent<Rigidbody2D>();
@@ -26,7 +27,7 @@ public class bullet : MonoBehaviour
         enemy_move enemy= collision.collider.GetComponent<enemy_move>();
         if (enemy != null)
         {
-            enemy.Hit();
+            enemy.Hit(damage);
             Destroy(gameObject);
         }    
     }
