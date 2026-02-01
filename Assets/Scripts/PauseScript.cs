@@ -3,16 +3,35 @@ using UnityEngine.SceneManagement;
 
 public class PauseScript : MonoBehaviour
 {
+    private bool isPaused = false;
+    public GameObject objetoMenuPausa;
+
+    void Update()
+    {
+        if (Input.GetKeyDown(KeyCode.P))
+        {
+            if (isPaused)
+            {
+                Continue();
+            }
+            else
+            {
+                Pause();
+            }
+        }
+    }
     public void Pause()
     {
-        gameObject.SetActive(true);
+        objetoMenuPausa.SetActive(true);
         Time.timeScale = 0;
+        isPaused = true;
     }
 
     public void Continue()
     {
-        gameObject.SetActive(false);
+        objetoMenuPausa.SetActive(false);
         Time.timeScale = 1;
+        isPaused = false;
     }
 
     public void Restart()
