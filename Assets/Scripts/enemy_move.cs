@@ -9,12 +9,23 @@ public class enemy_move : MonoBehaviour
     public GameObject maskPrefab;
     public float speed = 2f;
     public float detectionRadius = 5f;
+    public int baseDamage = 1;
+    public MaskData equippedMask;
+
+    private int totalDamage;
     private Vector2 movement;
     private int health=4;
 
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
+        totalDamage = baseDamage;
+
+        if (equippedMask != null)
+        {
+            totalDamage += equippedMask.extraDamage;
+            health += equippedMask.extraLife;
+        }
     }
 
     void Update()
@@ -36,11 +47,17 @@ public class enemy_move : MonoBehaviour
     private void OnCollisionEnter2D(Collision2D collision)
     {
         healthPlayer red_life = collision.collider.GetComponent<healthPlayer>();
-        red_life?.DamageReceived(1);
+        red_life?.DamageReceived(totalDamage);
     }
+
      public void Hit()
     {
         health = health-1;
-        if (health == 0) Destroy(gameObject);
+        if (health <= 0) Destroy(gameObject);
+    }
+
+    public void AddExtraDamage(int amount)
+    {
+        totalDamage += amount;
     }
 }
