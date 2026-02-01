@@ -54,19 +54,28 @@ public class red : MonoBehaviour
     }
 
     public void ActivarMascara(Tipo_mascara mask)
-    {
+    {   bool cambiar = true;
+        if (mascaraActual != Tipo_mascara.Extra && mascaraActual != Tipo_mascara.Iron)
+        {
+            cambiar=false;
+        }
         mascaraActual = mask;
         if (mascaraActual == Tipo_mascara.Extra) {
-            GetComponent<healthPlayer>().currentHealth = 10;
+            GetComponent<healthPlayer>().currentHealth = 18;
         }
         else if (mascaraActual == Tipo_mascara.Iron)
         {
-            GetComponent<healthPlayer>().currentHealth = 5;
+            GetComponent<healthPlayer>().currentHealth = 13;
         }
-        else if (mascaraActual == Tipo_mascara.Iron)
+        else if (cambiar )
+        {
+            GetComponent<healthPlayer>().currentHealth = 8;
+
+        }
+        /*else if (mascaraActual == Tipo_mascara.Iron)
         {
             GetComponent<healthPlayer>().currentHealth = 1;
-        }
+        }*/
     }
     private void dispara()
     {
@@ -80,15 +89,15 @@ public class red : MonoBehaviour
         bull.GetComponent<bullet>().Set_Direction(dir); 
 
         if (mascaraActual == Tipo_mascara.Fuego) {
-            bull.GetComponent<bullet>().damage = 3;
+            bull.GetComponent<bullet>().damage = 4;
         }
         else if (mascaraActual == Tipo_mascara.Agua || mascaraActual == Tipo_mascara.Iron)
         {
-            bull.GetComponent<bullet>().damage = 2;
+            bull.GetComponent<bullet>().damage = 3;
         }
         else if (mascaraActual == Tipo_mascara.Planta || mascaraActual == Tipo_mascara.Extra)
         {
-            bull.GetComponent<bullet>().damage = 1;
+            bull.GetComponent<bullet>().damage =2;
         }
         
         Destroy(bull,1f);    

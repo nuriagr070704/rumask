@@ -11,12 +11,12 @@ public class enemy_move : MonoBehaviour
     public float detectionRadius = 5f;
     public int baseDamage = 1;
     public MaskData equippedMask;
-
+    
     private int totalDamage;
     private Vector2 movement;
-    private int health=4;
+    private int health=8;
     private bool redSeen = false;
-
+    public int probabilidad=25;
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
@@ -57,7 +57,12 @@ public class enemy_move : MonoBehaviour
         if (health <= 0) {
             if (maskPrefab != null)
             {
-                Instantiate(maskPrefab, transform.position, Quaternion.identity);
+                int suerte = Random.Range(0,100);
+                if(suerte < probabilidad)
+                {
+                    Instantiate(maskPrefab, transform.position, Quaternion.identity);
+                    
+                }
             }
             Destroy(gameObject);
         }
