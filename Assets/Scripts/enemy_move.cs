@@ -6,6 +6,7 @@ public class enemy_move : MonoBehaviour
 {
     private Rigidbody2D rb;
     public Transform player;
+    public GameObject maskPrefab;
     public float speed = 2f;
     public float detectionRadius = 5f;
     private Vector2 movement;
