@@ -22,15 +22,5 @@ public class healthPlayer : MonoBehaviour
         }
     }
 
-    // private void OnCollisionEnter2D(Collision2D collision)
-    // {
-    //     if (collision.gameObject.CompareTag("Enemy") 
-    //     || collision.gameObject.CompareTag("Enemy1")
-    //     || collision.gameObject.CompareTag("Enemy2")
-    //     || collision.gameObject.CompareTag("Enemy3")
-    //     || collision.gameObject.CompareTag("Enemy4"))
-    //     {
-    //         DamageReceived(1);
-    //     }
-    // }
+   
 }
