@@ -15,6 +15,7 @@ public class enemy_move : MonoBehaviour
     private int totalDamage;
     private Vector2 movement;
     private int health=4;
+    private bool redSeen = false;
 
     void Start()
     {
@@ -31,8 +32,9 @@ public class enemy_move : MonoBehaviour
     void Update()
     {
         float distanceToPlayer = Vector2.Distance(transform.position, player.position);
-        if (distanceToPlayer < detectionRadius)
+        if (distanceToPlayer < detectionRadius || redSeen)
         {
+            redSeen = true;
             Vector2 direction = (player.position - transform.position).normalized;
             movement = new Vector2(direction.x, direction.y);
         }
