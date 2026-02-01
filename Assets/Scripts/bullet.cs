@@ -30,4 +30,8 @@ public class bullet : MonoBehaviour
             Destroy(gameObject);
         }    
     }
+<<<<<<< Updated upstream
 }
+=======
+}
+>>>>>>> Stashed changes

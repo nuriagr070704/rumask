@@ -1,4 +1,0 @@
-repository "RUMASK/RUMASK@6872803661241@cloud"
-  path "/"
-    br "/main"
-    co "/main"
